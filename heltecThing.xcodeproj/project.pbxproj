@@ -1,0 +1,396 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B3ED2E039BB547C75BA3DB06 /* Pods_heltecThing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182A375347D06C468F2D8880 /* Pods_heltecThing.framework */; };
+		D757284824A6979800B9C1BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D757284724A6979800B9C1BE /* AppDelegate.swift */; };
+		D757284A24A6979800B9C1BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D757284924A6979800B9C1BE /* ViewController.swift */; };
+		D757284D24A6979800B9C1BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D757284B24A6979800B9C1BE /* Main.storyboard */; };
+		D757285024A6979800B9C1BE /* heltecThing.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D757284E24A6979800B9C1BE /* heltecThing.xcdatamodeld */; };
+		D757285224A6979800B9C1BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D757285124A6979800B9C1BE /* Assets.xcassets */; };
+		D757285524A6979800B9C1BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D757285324A6979800B9C1BE /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		182A375347D06C468F2D8880 /* Pods_heltecThing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heltecThing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		523C47C3A6151BEE26CF10B1 /* Pods-heltecThing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heltecThing.debug.xcconfig"; path = "Target Support Files/Pods-heltecThing/Pods-heltecThing.debug.xcconfig"; sourceTree = "<group>"; };
+		83F1626353C3A0EC7B147D86 /* Pods-heltecThing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heltecThing.release.xcconfig"; path = "Target Support Files/Pods-heltecThing/Pods-heltecThing.release.xcconfig"; sourceTree = "<group>"; };
+		D757284424A6979800B9C1BE /* heltecThing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heltecThing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D757284724A6979800B9C1BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D757284924A6979800B9C1BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D757284C24A6979800B9C1BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D757284F24A6979800B9C1BE /* heltecThing.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = heltecThing.xcdatamodel; sourceTree = "<group>"; };
+		D757285124A6979800B9C1BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D757285424A6979800B9C1BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D757285624A6979800B9C1BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D757284124A6979700B9C1BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3ED2E039BB547C75BA3DB06 /* Pods_heltecThing.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		34C6CD8851590B480FB5D0CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				523C47C3A6151BEE26CF10B1 /* Pods-heltecThing.debug.xcconfig */,
+				83F1626353C3A0EC7B147D86 /* Pods-heltecThing.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C56E7F0B70435A890FC051F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				182A375347D06C468F2D8880 /* Pods_heltecThing.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D757283B24A6979700B9C1BE = {
+			isa = PBXGroup;
+			children = (
+				D757284624A6979800B9C1BE /* heltecThing */,
+				D757284524A6979800B9C1BE /* Products */,
+				34C6CD8851590B480FB5D0CE /* Pods */,
+				C56E7F0B70435A890FC051F5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D757284524A6979800B9C1BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D757284424A6979800B9C1BE /* heltecThing.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D757284624A6979800B9C1BE /* heltecThing */ = {
+			isa = PBXGroup;
+			children = (
+				D757284724A6979800B9C1BE /* AppDelegate.swift */,
+				D757284924A6979800B9C1BE /* ViewController.swift */,
+				D757284B24A6979800B9C1BE /* Main.storyboard */,
+				D757285124A6979800B9C1BE /* Assets.xcassets */,
+				D757285324A6979800B9C1BE /* LaunchScreen.storyboard */,
+				D757285624A6979800B9C1BE /* Info.plist */,
+				D757284E24A6979800B9C1BE /* heltecThing.xcdatamodeld */,
+			);
+			path = heltecThing;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D757284324A6979700B9C1BE /* heltecThing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D757285924A6979800B9C1BE /* Build configuration list for PBXNativeTarget "heltecThing" */;
+			buildPhases = (
+				0EBE87DADAEB0BE718B0945C /* [CP] Check Pods Manifest.lock */,
+				D757284024A6979700B9C1BE /* Sources */,
+				D757284124A6979700B9C1BE /* Frameworks */,
+				D757284224A6979700B9C1BE /* Resources */,
+				8CF38891604BF7213D467AC3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = heltecThing;
+			productName = heltecThing;
+			productReference = D757284424A6979800B9C1BE /* heltecThing.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D757283C24A6979700B9C1BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = zabrodin;
+				TargetAttributes = {
+					D757284324A6979700B9C1BE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = FF57A2VP9D;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D757283F24A6979700B9C1BE /* Build configuration list for PBXProject "heltecThing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D757283B24A6979700B9C1BE;
+			productRefGroup = D757284524A6979800B9C1BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D757284324A6979700B9C1BE /* heltecThing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D757284224A6979700B9C1BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D757285524A6979800B9C1BE /* LaunchScreen.storyboard in Resources */,
+				D757285224A6979800B9C1BE /* Assets.xcassets in Resources */,
+				D757284D24A6979800B9C1BE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EBE87DADAEB0BE718B0945C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-heltecThing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CF38891604BF7213D467AC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-heltecThing/Pods-heltecThing-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RestEssentials/RestEssentials.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RestEssentials.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-heltecThing/Pods-heltecThing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D757284024A6979700B9C1BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D757284A24A6979800B9C1BE /* ViewController.swift in Sources */,
+				D757285024A6979800B9C1BE /* heltecThing.xcdatamodeld in Sources */,
+				D757284824A6979800B9C1BE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D757284B24A6979800B9C1BE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D757284C24A6979800B9C1BE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D757285324A6979800B9C1BE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D757285424A6979800B9C1BE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D757285724A6979800B9C1BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D757285824A6979800B9C1BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D757285A24A6979800B9C1BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 523C47C3A6151BEE26CF10B1 /* Pods-heltecThing.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FF57A2VP9D;
+				INFOPLIST_FILE = heltecThing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.ukr.zabrodin.heltecThing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D757285B24A6979800B9C1BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83F1626353C3A0EC7B147D86 /* Pods-heltecThing.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FF57A2VP9D;
+				INFOPLIST_FILE = heltecThing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.ukr.zabrodin.heltecThing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D757283F24A6979700B9C1BE /* Build configuration list for PBXProject "heltecThing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D757285724A6979800B9C1BE /* Debug */,
+				D757285824A6979800B9C1BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D757285924A6979800B9C1BE /* Build configuration list for PBXNativeTarget "heltecThing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D757285A24A6979800B9C1BE /* Debug */,
+				D757285B24A6979800B9C1BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D757284E24A6979800B9C1BE /* heltecThing.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D757284F24A6979800B9C1BE /* heltecThing.xcdatamodel */,
+			);
+			currentVersion = D757284F24A6979800B9C1BE /* heltecThing.xcdatamodel */;
+			path = heltecThing.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D757283C24A6979700B9C1BE /* Project object */;
+}

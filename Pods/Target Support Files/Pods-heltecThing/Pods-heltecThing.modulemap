@@ -1,0 +1,6 @@
+framework module Pods_heltecThing {
+  umbrella header "Pods-heltecThing-umbrella.h"
+
+  export *
+  module * { export * }
+}
