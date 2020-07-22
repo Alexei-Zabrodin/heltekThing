@@ -9,6 +9,7 @@ target ‘heltecThing’ do
   #pod 'Alamofire', '~> 3'
   #   pod 'Moya', '~> 8.0'
   pod 'RestEssentials', '~> 3'
+  pod 'IQKeyboardManagerSwift', '~> 5'
   
 end
 
@@ -31,6 +32,12 @@ post_install do |installer|
         config.build_settings['SWIFT_VERSION'] = '3.0'
       end
     end
-
+    
+    if target.name == 'IQKeyboardManagerSwift'
+        target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '3.0'
+        end
+    end
+    
   end
 end

@@ -15,6 +15,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var valuePicker: UIPickerView!
+    @IBOutlet weak var textField: UITextField!
     
     private let channelNumber = "1082845"
     private let counterFieldNumber = "1"
@@ -30,6 +31,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     // GET https://api.thingspeak.com/update?api_key=D029V60SWX9OTO8Z&field1=0
     
     private var value:Int?
+    
+    @IBAction func SandTapHandler(_ sender: Any) {
+        
+    }
     
     private func readRemouteValue(withCompletion completion: @escaping (String?)->Void) {
         let readUrl = "\(endpoint)/channels/\(channelNumber)/fields/\(counterFieldNumber).json?api_key=\(heltecChannelReadAPIKey)"

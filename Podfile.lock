@@ -1,16 +1,20 @@
 PODS:
+  - IQKeyboardManagerSwift (5.0.8)
   - RestEssentials (3.1.0)
 
 DEPENDENCIES:
+  - IQKeyboardManagerSwift (~> 5)
   - RestEssentials (~> 3)
 
 SPEC REPOS:
   trunk:
+    - IQKeyboardManagerSwift
     - RestEssentials
 
 SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 2e7dc7f98c111458c1ea2b373f893e8cf95e2b97
   RestEssentials: f8d00c1b5b320fc1d5febf979b9cc5fc6f6416ec
 
-PODFILE CHECKSUM: d2f2e423084051cce8b7927b9f2df4dfc81427ef
+PODFILE CHECKSUM: 531b99bc363516bada604d3609db8ae7739a194c
 
 COCOAPODS: 1.9.3

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G22010" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QOn-Vt-7wg">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,17 +19,17 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lRQ-O8-8zD">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <rect key="frame" x="16" y="64" width="288" height="504"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aab-2c-4nX">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="95"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="95"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMa-1u-d2h">
-                                                <rect key="frame" x="0.0" y="5" width="343" height="85"/>
+                                                <rect key="frame" x="0.0" y="5" width="288" height="85"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="71"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -42,10 +42,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLN-h4-VJX">
-                                        <rect key="frame" x="0.0" y="95" width="343" height="250"/>
+                                        <rect key="frame" x="0.0" y="95" width="288" height="250"/>
                                         <subviews>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TF0-8H-vOS">
-                                                <rect key="frame" x="12" y="17" width="320" height="216"/>
+                                                <rect key="frame" x="-15.5" y="17" width="320" height="216"/>
                                                 <connections>
                                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="ohf-aH-tFn"/>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="L1v-fY-zZ9"/>
@@ -59,7 +59,39 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fwW-6f-136">
-                                        <rect key="frame" x="0.0" y="345" width="343" height="258"/>
+                                        <rect key="frame" x="0.0" y="345" width="288" height="159"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vox-cH-ZMa">
+                                                <rect key="frame" x="10" y="107" width="268" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="zdB-KY-4nf"/>
+                                                </constraints>
+                                                <state key="normal" title="Send"/>
+                                                <connections>
+                                                    <action selector="SandTapHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vug-83-LJy"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oVV-t3-1G3">
+                                                <rect key="frame" x="10" y="55" width="268" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="Vuq-Bz-pAR"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nhy-Fv-TZW"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Vox-cH-ZMa" firstAttribute="leading" secondItem="fwW-6f-136" secondAttribute="leading" constant="10" id="0GN-Rj-xxQ"/>
+                                            <constraint firstItem="oVV-t3-1G3" firstAttribute="leading" secondItem="fwW-6f-136" secondAttribute="leading" constant="10" id="Cgv-JY-Zoc"/>
+                                            <constraint firstAttribute="trailing" secondItem="oVV-t3-1G3" secondAttribute="trailing" constant="10" id="CoJ-Tj-tbl"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vox-cH-ZMa" secondAttribute="trailing" constant="10" id="OTy-Tx-1WJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="Vox-cH-ZMa" secondAttribute="bottom" constant="8" id="ft2-h6-MaH"/>
+                                            <constraint firstItem="Vox-cH-ZMa" firstAttribute="top" secondItem="oVV-t3-1G3" secondAttribute="bottom" constant="8" id="wj4-x6-N5F"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -82,6 +114,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="sCj-o0-mJ5"/>
                     <connections>
+                        <outlet property="textField" destination="oVV-t3-1G3" id="U0S-51-Hye"/>
                         <outlet property="valueLabel" destination="aMa-1u-d2h" id="gWv-qX-4e6"/>
                         <outlet property="valuePicker" destination="TF0-8H-vOS" id="ti7-9R-xIV"/>
                     </connections>

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-heltecThing.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>85C49C4B921907694142FB41C8AB97B7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B490E7485944099E16C9CBD79119D1D4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
