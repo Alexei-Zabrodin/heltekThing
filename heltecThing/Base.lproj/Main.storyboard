@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ThingSpeak-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="heltecThing" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,6 +22,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="8RY-WB-L1s">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lRQ-O8-8zD">
                                 <rect key="frame" x="16" y="64" width="288" height="504"/>
                                 <subviews>
@@ -45,7 +48,7 @@
                                         <rect key="frame" x="0.0" y="95" width="288" height="250"/>
                                         <subviews>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TF0-8H-vOS">
-                                                <rect key="frame" x="-15.5" y="17" width="320" height="216"/>
+                                                <rect key="frame" x="-16" y="17" width="320" height="216"/>
                                                 <connections>
                                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="ohf-aH-tFn"/>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="L1v-fY-zZ9"/>
@@ -107,12 +110,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lRQ-O8-8zD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="1ci-uV-IqJ"/>
+                            <constraint firstItem="8RY-WB-L1s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FSY-YJ-utP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lRQ-O8-8zD" secondAttribute="bottom" id="Ivs-qn-sXQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lRQ-O8-8zD" secondAttribute="trailing" id="OJP-Ez-6L4"/>
+                            <constraint firstAttribute="trailing" secondItem="8RY-WB-L1s" secondAttribute="trailing" id="f6F-dk-lax"/>
+                            <constraint firstItem="8RY-WB-L1s" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mG7-vb-VhT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8RY-WB-L1s" secondAttribute="bottom" id="ttZ-ho-r1l"/>
                             <constraint firstItem="lRQ-O8-8zD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xr8-Vw-bRq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sCj-o0-mJ5"/>
+                    <navigationItem key="navigationItem" title="ThingSpeak" id="sCj-o0-mJ5"/>
                     <connections>
                         <outlet property="textField" destination="oVV-t3-1G3" id="U0S-51-Hye"/>
                         <outlet property="valueLabel" destination="aMa-1u-d2h" id="gWv-qX-4e6"/>
@@ -121,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="120.8" y="124.58770614692655"/>
+            <point key="canvasLocation" x="120" y="123.59154929577466"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="575-WO-1ay">
@@ -140,4 +147,7 @@
             <point key="canvasLocation" x="-593" y="124"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="769" height="1920"/>
+    </resources>
 </document>
