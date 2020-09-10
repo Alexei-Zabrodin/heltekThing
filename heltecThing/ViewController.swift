@@ -16,7 +16,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var valuePicker: UIPickerView!
     @IBOutlet weak var textField: UITextField!
-    
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+
     private let channelNumber = "1082845"
     private let counterFieldNumber = "1"
     private let heltecChannelWriteAPIKey = "D029V60SWX9OTO8Z"
@@ -33,7 +34,31 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     private var value:Int?
     
     @IBAction func SandTapHandler(_ sender: Any) {
-        
+        spinner.startAnimating()
+        self.writeRemouteValue(textField.text ?? "", numberField: 2, withCompletion: { (success) in
+            DispatchQueue.main.async {
+                self.spinner.stopAnimating()
+            }
+        })
+    }
+    
+    @IBAction func reloadTapHandler(_ sender: Any) {
+        update()
+    }
+    
+    func update(){
+        spinner.startAnimating()
+        self.readRemouteValue(withCompletion: {[weak self] value in
+            if let valueString = value, let valueInt = Int(valueString) {
+                DispatchQueue.main.async {
+                    guard let self = self else {return}
+                    self.spinner.stopAnimating()
+                    self.value = valueInt
+                    self.valueLabel.text = valueString
+                    self.valuePicker.selectRow(valueInt, inComponent: 0, animated: false)
+                }
+            }
+        })
     }
     
     private func readRemouteValue(withCompletion completion: @escaping (String?)->Void) {
@@ -61,9 +86,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     
-    private func writeRemouteValue(_ value:String, withCompletion completion: @escaping (Bool)->Void) {
-        let writeUrl = "\(endpoint)/update?api_key=\(heltecChannelWriteAPIKey)&field1=\(value)"
+    private func writeRemouteValue(_ value:String, numberField:Int, withCompletion completion: @escaping (Bool)->Void) {
+        let writeUrl = "\(endpoint)/update?api_key=\(heltecChannelWriteAPIKey)&field\(String(numberField))=\(value)"
         guard let rest = RestController.make(urlString: writeUrl) else {
+            let alert = UIAlertController(title: "Try later", message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             print("Bad URL")
             return
         }
@@ -76,16 +104,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        self.readRemouteValue(withCompletion: { value in
-            if let valueString = value, let valueInt = Int(valueString) {
-                DispatchQueue.main.async {
-                    self.value = valueInt
-                    self.valueLabel.text = valueString
-                    self.valuePicker.selectRow(valueInt, inComponent: 0, animated: false)
-                }
-            }
-        })
+        update()
     }
 
     public func numberOfComponents(in pickerView: UIPickerView) -> Int{
@@ -102,12 +121,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         print(row)
+        spinner.startAnimating()
         self.readRemouteValue(withCompletion: { value in
             if let valueString = value, let valueInt = Int(valueString) {
                 if self.value == valueInt {
                     let modifiedInt = row
-                    self.writeRemouteValue(String(modifiedInt), withCompletion: { (success) in
+                    self.writeRemouteValue(String(modifiedInt), numberField: 1, withCompletion: { (success) in
                         DispatchQueue.main.async {
+                            self.spinner.stopAnimating()
                             let remoteValue = success ? modifiedInt : valueInt
                             self.value = remoteValue
                             self.valueLabel.text = String(remoteValue)
@@ -117,6 +138,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 }
                 else{
                     DispatchQueue.main.async {
+                        self.spinner.stopAnimating()
                         self.value = valueInt
                         self.valueLabel.text = valueString
                         self.valuePicker.selectRow(valueInt, inComponent: 0, animated: false)

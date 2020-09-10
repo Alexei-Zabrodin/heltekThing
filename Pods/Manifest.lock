@@ -1,20 +1,42 @@
 PODS:
-  - IQKeyboardManagerSwift (5.0.8)
-  - RestEssentials (3.1.0)
+  - Alamofire (5.2.2)
+  - IQKeyboardManagerSwift (6.5.6)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - PromiseKit (6.13.1):
+    - PromiseKit/CorePromise (= 6.13.1)
+    - PromiseKit/Foundation (= 6.13.1)
+    - PromiseKit/UIKit (= 6.13.1)
+  - PromiseKit/CorePromise (6.13.1)
+  - PromiseKit/Foundation (6.13.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.13.1):
+    - PromiseKit/CorePromise
+  - RestEssentials (5.1.0)
 
 DEPENDENCIES:
-  - IQKeyboardManagerSwift (~> 5)
-  - RestEssentials (~> 3)
+  - IQKeyboardManagerSwift
+  - Moya
+  - PromiseKit
+  - RestEssentials
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - IQKeyboardManagerSwift
+    - Moya
+    - PromiseKit
     - RestEssentials
 
 SPEC CHECKSUMS:
-  IQKeyboardManagerSwift: 2e7dc7f98c111458c1ea2b373f893e8cf95e2b97
-  RestEssentials: f8d00c1b5b320fc1d5febf979b9cc5fc6f6416ec
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
+  RestEssentials: e91de7d7b97329128761de8c40abf93fba64b764
 
-PODFILE CHECKSUM: 531b99bc363516bada604d3609db8ae7739a194c
+PODFILE CHECKSUM: 10daf1bd488983c2e9d057a97616c9ee5170f9fa
 
 COCOAPODS: 1.9.3
