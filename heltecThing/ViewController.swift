@@ -49,10 +49,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func update(){
         spinner.startAnimating()
         self.readRemouteValue(withCompletion: {[weak self] value in
-            if let valueString = value, let valueInt = Int(valueString) {
-                DispatchQueue.main.async {
-                    guard let self = self else {return}
-                    self.spinner.stopAnimating()
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                self.spinner.stopAnimating()
+                
+                if let valueString = value, let valueInt = Int(valueString) {
                     self.value = valueInt
                     self.valueLabel.text = valueString
                     self.valuePicker.selectRow(valueInt, inComponent: 0, animated: false)
