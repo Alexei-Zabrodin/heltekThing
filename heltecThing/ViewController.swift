@@ -19,7 +19,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var spinner: UIActivityIndicatorView!
 
     private let channelNumber = "1082845"
-    private let counterFieldNumber = "1"
+    private let kCounterFieldNumber = "1"
+    private let kTextFieldNumber = "2"
     private let heltecChannelWriteAPIKey = "D029V60SWX9OTO8Z"
     private let heltecChannelReadAPIKey = "LBWYUUMWVLK2LXZD"
     private let endpoint = "https://api.thingspeak.com"
@@ -35,7 +36,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBAction func SandTapHandler(_ sender: Any) {
         spinner.startAnimating()
-        self.writeRemouteValue(textField.text ?? "", numberField: 2, withCompletion: { (success) in
+        self.writeRemouteValue((kCounterFieldNumber: String(valuePicker.selectedRow(inComponent: 0)), kTextFieldNumber: textField.text ?? ""), withCompletion: { (success) in
             DispatchQueue.main.async {
                 self.spinner.stopAnimating()
             }
@@ -48,7 +49,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     func update(){
         spinner.startAnimating()
-        self.readRemouteValue(withCompletion: {[weak self] value in
+        self.readRemouteValue(numberField: kCounterFieldNumber, withCompletion: {[weak self] value in
             DispatchQueue.main.async {
                 guard let self = self else {return}
                 self.spinner.stopAnimating()
@@ -62,8 +63,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         })
     }
     
-    private func readRemouteValue(withCompletion completion: @escaping (String?)->Void) {
-        let readUrl = "\(endpoint)/channels/\(channelNumber)/fields/\(counterFieldNumber).json?api_key=\(heltecChannelReadAPIKey)"
+    private func readRemouteValue(numberField:String, withCompletion completion: @escaping (String?)->Void) {
+        let readUrl = "\(endpoint)/channels/\(channelNumber)/fields/\(numberField).json?api_key=\(heltecChannelReadAPIKey)"
         guard let rest = RestController.make(urlString: readUrl) else {
             print("Bad URL")
             return
@@ -79,7 +80,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                     return
                 }
                 
-                let fieldValue = lastFeed["field1"]
+                let fieldValue = lastFeed["field\(String(numberField))"]
                 completion(fieldValue.string)
             } catch {
                 print("Error performing GET: \(error)")
@@ -87,8 +88,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     
-    private func writeRemouteValue(_ value:String, numberField:Int, withCompletion completion: @escaping (Bool)->Void) {
-        let writeUrl = "\(endpoint)/update?api_key=\(heltecChannelWriteAPIKey)&field\(String(numberField))=\(value)"
+    private func writeRemouteValue(_ value:(kCounterFieldNumber: String, kTextFieldNumber: String), withCompletion completion: @escaping (Bool)->Void) {
+        let writeUrl = "\(endpoint)/update?api_key=\(heltecChannelWriteAPIKey)&field\(kCounterFieldNumber)=\(value.kCounterFieldNumber)&field\(kTextFieldNumber)=\(value.kTextFieldNumber)"
         guard let rest = RestController.make(urlString: writeUrl) else {
             let alert = UIAlertController(title: "Try later", message: "", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
@@ -122,12 +123,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         print(row)
+        let textFieldText = self.textField.text ?? ""
         spinner.startAnimating()
-        self.readRemouteValue(withCompletion: { value in
+        self.readRemouteValue(numberField: kCounterFieldNumber, withCompletion: { value in
             if let valueString = value, let valueInt = Int(valueString) {
                 if self.value == valueInt {
                     let modifiedInt = row
-                    self.writeRemouteValue(String(modifiedInt), numberField: 1, withCompletion: { (success) in
+                    self.writeRemouteValue((kCounterFieldNumber: String(modifiedInt), kTextFieldNumber: textFieldText), withCompletion: { (success) in
                         DispatchQueue.main.async {
                             self.spinner.stopAnimating()
                             let remoteValue = success ? modifiedInt : valueInt
@@ -145,6 +147,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                         self.valuePicker.selectRow(valueInt, inComponent: 0, animated: false)
                     }
                 }
+            }
+            else{
+                DispatchQueue.main.async {[weak self]in self?.spinner.stopAnimating()}
             }
         })
     }
